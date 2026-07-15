@@ -26,7 +26,7 @@ const Editprofile = ({ user }) => {
       }
 
       const res = await axios.patch(
-        BASE_URL + "profile/view/edit",
+        BASE_URL + "/profile/view/edit",
         payload,
         { withCredentials: true }
       )

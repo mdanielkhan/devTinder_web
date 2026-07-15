@@ -10,7 +10,7 @@ const ReceivedRequests = () => {
 
     const fetchRequests = async () => {
         try {
-            const res = await axios.get(BASE_URL + "user/requests/received", {
+            const res = await axios.get(BASE_URL + "/user/requests/received", {
                 withCredentials: true,
             })
             dispatch(addRequests(res?.data?.receivedRequests || []))
@@ -27,7 +27,7 @@ const ReceivedRequests = () => {
         try {
             // UNCONFIRMED endpoint — see note above
             await axios.post(
-                BASE_URL + "request/review/" + status + "/" + requestId,
+                BASE_URL + "/request/review/" + status + "/" + requestId,
                 {},
                 { withCredentials: true }
             )

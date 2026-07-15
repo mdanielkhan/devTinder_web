@@ -21,7 +21,7 @@ import { useNavigate } from "react-router-dom"
         
     const Signup_Handler = async() =>{
             try{
-                    const res =await axios.post(BASE_URL + "signup",{
+                    const res =await axios.post(BASE_URL + "/signup",{
                         email : emailID,
                         password: password,
                         age : age,
