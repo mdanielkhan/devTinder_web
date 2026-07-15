@@ -36,7 +36,7 @@ const Nav = () => {
         <div className="flex-1">
           <Link to="/" className="flex items-center gap-2 group">
             <span className="w-8 h-8 rounded-field bg-gradient-to-br from-primary to-secondary flex items-center justify-center text-primary-content font-display font-bold text-sm shadow-lg shadow-primary/30 group-hover:scale-105 transition-transform">
-              D
+              G
             </span>
             <span className="font-display text-lg font-bold tracking-tight bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
               GitMatch
