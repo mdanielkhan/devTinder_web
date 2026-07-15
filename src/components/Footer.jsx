@@ -1,27 +1,18 @@
-// Footer.jsx — tokens fixed, copy left as-is since it's placeholder
 const Footer = () => {
   return (
-    <footer className="footer sm:footer-horizontal bg-base-200 text-base-content border-t border-base-300 p-10">
-      <nav>
-        <h6 className="footer-title text-accent">Services</h6>
-        <a className="link link-hover">Branding</a>
-        <a className="link link-hover">Design</a>
-        <a className="link link-hover">Marketing</a>
-        <a className="link link-hover">Advertisement</a>
-      </nav>
-      <nav>
-        <h6 className="footer-title text-accent">Company</h6>
-        <a className="link link-hover">About us</a>
-        <a className="link link-hover">Contact</a>
-        <a className="link link-hover">Jobs</a>
-        <a className="link link-hover">Press kit</a>
-      </nav>
-      <nav>
-        <h6 className="footer-title text-accent">Social</h6>
-        <div className="grid grid-flow-col gap-4">
-          {/* svg icons unchanged, fill-current already inherits text-base-content */}
+    <footer className="border-t border-base-300/60 bg-base-100">
+      <div className="max-w-5xl mx-auto px-4 py-8 flex flex-col sm:flex-row items-center justify-between gap-3 text-sm text-base-content/50">
+        <div className="flex items-center gap-2">
+          <span className="w-5 h-5 rounded-md bg-gradient-to-br from-primary to-secondary flex items-center justify-center text-primary-content font-display font-bold text-[10px]">
+            D
+          </span>
+          <span>
+            <span className="text-base-content/70 font-medium">DevTinder</span>{" "}
+            — connect with developers who ship.
+          </span>
         </div>
-      </nav>
+        <p>© {new Date().getFullYear()} DevTinder. Built for devs, by devs.</p>
+      </div>
     </footer>
   )
 }

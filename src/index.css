@@ -1,1 +1,81 @@
+/* @import "tailwindcss"; */
+
 @import "tailwindcss";
+
+@plugin "daisyui" {
+  themes: devtinder --default;
+}
+
+@plugin "daisyui/theme" {
+  name: "devtinder";
+  default: true;
+  prefersdark: true;
+  color-scheme: dark;
+
+  /* base surfaces — near-black with a faint violet tint */
+  --color-base-100: oklch(15% 0.014 285);
+  --color-base-200: oklch(19% 0.016 285);
+  --color-base-300: oklch(25% 0.018 285);
+  --color-base-content: oklch(94% 0.006 285);
+
+  /* one vivid accent — electric violet, paired with a magenta for gradients */
+  --color-primary: oklch(64% 0.23 298);
+  --color-primary-content: oklch(99% 0.01 298);
+  --color-secondary: oklch(68% 0.21 345);
+  --color-secondary-content: oklch(99% 0.01 345);
+  --color-accent: oklch(64% 0.23 298);
+  --color-accent-content: oklch(99% 0.01 298);
+
+  --color-neutral: oklch(24% 0.016 285);
+  --color-neutral-content: oklch(90% 0.006 285);
+
+  --color-info: oklch(70% 0.14 230);
+  --color-info-content: oklch(98% 0.01 230);
+  --color-success: oklch(74% 0.16 155);
+  --color-success-content: oklch(15% 0.03 155);
+  --color-warning: oklch(80% 0.16 85);
+  --color-warning-content: oklch(18% 0.03 85);
+  --color-error: oklch(66% 0.22 25);
+  --color-error-content: oklch(98% 0.01 25);
+
+  --radius-selector: 0.5rem;
+  --radius-field: 0.65rem;
+  --radius-box: 1.25rem;
+  --size-selector: 0.25rem;
+  --size-field: 0.25rem;
+  --border: 1px;
+  --depth: 1;
+  --noise: 0;
+}
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Outfit", ui-sans-serif, system-ui, sans-serif;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-base-100);
+  background-image:
+    radial-gradient(60rem 30rem at 15% -10%, oklch(64% 0.23 298 / 0.16), transparent 60%),
+    radial-gradient(50rem 26rem at 110% 10%, oklch(68% 0.21 345 / 0.12), transparent 60%);
+  background-attachment: fixed;
+}
+
+::selection {
+  background-color: oklch(64% 0.23 298 / 0.35);
+}
+
+/* thin, unobtrusive scrollbar to match the dark theme */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background-color: var(--color-base-300);
+  border-radius: 999px;
+  border: 2px solid var(--color-base-100);
+}

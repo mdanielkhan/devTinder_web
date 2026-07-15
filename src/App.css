@@ -1,4 +1,21 @@
-@import "tailwindcss";
+/* @import "tailwindcss";
 @plugin "daisyui" {
   themes: all;
+} */
+
+/* Small shared animations. Tailwind + the daisyui theme are set up in index.css. */
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-up {
+  animation: fade-up 0.35s ease-out both;
 }
