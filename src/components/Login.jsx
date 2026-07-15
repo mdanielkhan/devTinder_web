@@ -3,7 +3,7 @@ import axios from "axios"
 import { useState } from "react"
 import { useDispatch } from "react-redux"
 import { addUser } from "../utils/userSlice"
-import { useNavigate } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 import { BASE_URL } from "../utils/contants"
 
 const Login = () => {
@@ -33,6 +33,8 @@ const Login = () => {
     }
   }
 
+
+
   return (
     <div className="flex justify-center items-center min-h-screen bg-base-100">
       <fieldset className="fieldset bg-base-200 border-base-300 rounded-box w-xs border p-6">
@@ -61,6 +63,7 @@ const Login = () => {
         <button className="btn btn-accent w-full mt-4" onClick={login_handler}>
           Login
         </button>
+        <Link to = "/signup">Create new account, Click here</Link>
       </fieldset>
     </div>
   )
