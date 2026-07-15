@@ -170,7 +170,7 @@ const Signup = () => {
       dispatch(addUser(res.data.user))
       navigate("/")
     } catch (err) {
-      const msg = err?.response?.data?.message
+      const msg = err?.response?.data?.error
       setError(typeof msg === "string" ? msg : "Invalid credentials. Please try again.")
     } finally {
       setLoading(false)
