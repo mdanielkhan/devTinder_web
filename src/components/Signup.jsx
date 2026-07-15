@@ -191,7 +191,7 @@ const Signup = () => {
       <div className="bg-base-200 border border-base-300 rounded-box p-7 shadow-2xl shadow-black/40">
         <div className="mb-6">
           <h2 className="text-2xl font-display font-bold text-base-content">Create your account</h2>
-          <p className="text-sm text-base-content/50 mt-1">Join DevTinder and start swiping.</p>
+          <p className="text-sm text-base-content/50 mt-1">Join GitMatch and start swiping.</p>
         </div>
 
         <div className="grid sm:grid-cols-2 gap-x-4">
