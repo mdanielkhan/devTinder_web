@@ -131,6 +131,7 @@ import { useDispatch } from "react-redux"
 import { addUser } from "../utils/userSlice"
 import { useState } from "react"
 import { useNavigate } from "react-router-dom"
+import toast from "react-hot-toast"
 
 const Signup = () => {
   const dispatch = useDispatch()
@@ -168,6 +169,7 @@ const Signup = () => {
         }
       )
       dispatch(addUser(res.data.user))
+      toast.success("User created successfully!")
       navigate("/")
     } catch (err) {
       const msg = err?.response?.data?.error

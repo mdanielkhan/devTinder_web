@@ -140,6 +140,7 @@ import { BASE_URL } from "../utils/contants"
 import { useDispatch } from "react-redux"
 import UserCard from "./UserCard"
 import { addUser } from "../utils/userSlice"
+import toast from "react-hot-toast"
 
 const Editprofile = ({ user }) => {
   const [firstName, setFirstName] = useState("")
@@ -169,6 +170,7 @@ const Editprofile = ({ user }) => {
         { withCredentials: true }
       )
       dispatch(addUser(res.data.user))
+      toast.success("Profile updated successfully!")
       setShowtoast(true)
       setTimeout(() => {
         setShowtoast(false)
