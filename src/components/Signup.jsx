@@ -295,6 +295,12 @@ const Signup = () => {
           </div>
         </div>
 
+        {!photoUrl && (
+          <p className="text-error text-sm mt-4 bg-error/10 border border-error/20 rounded-field px-3 py-2">
+            Enter photo url
+          </p>
+        )}
+
         {error && (
           <p className="text-error text-sm mt-4 bg-error/10 border border-error/20 rounded-field px-3 py-2">
             {error}
