@@ -10,6 +10,7 @@ import "./App.css";
 import { Provider } from "react-redux";
 import appStore from "./utils/appStore";
 import Signup from "./components/Signup";
+import Chat from "./components/Chat";
 
 
 function App() {
@@ -41,6 +42,14 @@ function App() {
               element={
                 <ProtectedRoute>
                   <ReceivedRequests />
+                </ProtectedRoute>
+              }
+            />
+            <Route
+              path="chat/:targetUser"
+              element={
+                <ProtectedRoute>
+                  <Chat />
                 </ProtectedRoute>
               }
             />

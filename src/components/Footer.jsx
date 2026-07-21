@@ -7,11 +7,11 @@ const Footer = () => {
             D
           </span>
           <span>
-            <span className="text-base-content/70 font-medium">DevTinder</span>{" "}
+            <span className="text-base-content/70 font-medium">GitMatch</span>{" "}
             — connect with developers who ship.
           </span>
         </div>
-        <p>© {new Date().getFullYear()} DevTinder. Built for devs, by devs.</p>
+        <p>© {new Date().getFullYear()} GitMatch. Built for devs, by devs.</p>
       </div>
     </footer>
   )

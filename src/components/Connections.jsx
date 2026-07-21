@@ -1,9 +1,9 @@
-
 import axios from "axios"
 import { useDispatch, useSelector } from "react-redux"
 import { BASE_URL } from "../utils/contants"
 import { addConnections } from "../utils/connectionSlice"
 import { useEffect } from "react"
+import { Link } from "react-router-dom"
 
 const Connections = () => {
     const dispatch = useDispatch()
@@ -77,11 +77,18 @@ const Connections = () => {
                                     {connection.gender}
                                 </p>
                             )}
+
                             {connection.about && (
                                 <p className="text-xs text-base-content/60 mt-2 line-clamp-2">
                                     {connection.about}
                                 </p>
                             )}
+
+                            <Link to={`/chat/${connection._id}`}>
+                                <button className="btn w-full mt-4 bg-gradient-to-r from-primary to-secondary border-none text-primary-content hover:brightness-110 shadow-lg shadow-primary/25">
+                                    Chat
+                                </button>
+                            </Link>
                         </div>
                     </div>
                 ))}
